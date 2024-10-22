@@ -1,0 +1,91 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  position: relative;
+  color: #fff;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Make sure content is above the canvas */
+}
+
+.box {
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), 0 0 30px #28a745;
+  max-width: 600px;
+  width: 90%;
+  border: 2px solid rgba(40, 167, 69, 0.7);
+  transition: all 0.3s;
+  position: relative; /* Allow positioning for child elements */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  color: #28a745;
+  word-wrap: break-word;
+  transition: color 0.3s;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.btn {
+  width: 100%; /* Make button full width */
+  padding: 15px; /* Increased padding for buttons */
+  font-size: 16px; /* Larger font size */
+  border-radius: 30px; /* Rounded button corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn-success {
+  background-color: #28a745; /* Green */
+  border: none; /* Remove border */
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.highlighted {
+  border: 2px solid #dc3545; /* Red border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), 0 0 30px #dc3545; /* Red highlight shadow */
+}
+
+.highlighted-text {
+  color: #dc3545; /* Change text color to red when recording */
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Set canvas behind the content */
+}
+
+#output {
+  margin-top: 20px;
+  height: 100px; /* Set the new height for the output div */
+  border: 1px solid #495057; /* Darker gray border */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly visible background */
+  padding: 15px;
+  border-radius: 5px;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  color: white; /* Set text color to white */
+  resize: none; /* Disable resizing for better layout */
+}
